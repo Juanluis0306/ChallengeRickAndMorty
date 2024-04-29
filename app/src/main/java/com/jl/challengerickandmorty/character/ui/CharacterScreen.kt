@@ -114,11 +114,8 @@ fun ItemCharacter(
 
             TextButton(
                 onClick = {
-                    characterViewModel.isDetailEnable.value = false
+                    characterViewModel.isDetailEnable.value = !isDetailEnable
                     characterViewModel.itemSelect.value = character
-                    if (character == itemSelect)
-                        characterViewModel.isDetailEnable.value = !isDetailEnable
-
                 },
                 modifier = Modifier.align(Alignment.CenterHorizontally)
             ) {
